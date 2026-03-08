@@ -10,5 +10,7 @@ public class MyStack {
         elements[stackPointer] = n;
         stackPointer++;
     }
-
+    public void pop() {
+        if(stackPointer > 0) stackPointer--;
+    }
 }
