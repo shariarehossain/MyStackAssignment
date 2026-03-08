@@ -19,4 +19,7 @@ public class MyStack {
     public boolean isEmpty() {
         return stackPointer == 0;
     }
+    public int getSize() {
+        return stackPointer;
+    }
 }
