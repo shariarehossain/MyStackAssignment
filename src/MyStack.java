@@ -16,4 +16,7 @@ public class MyStack {
     public int top() {
         return elements[stackPointer - 1];
     }
+    public boolean isEmpty() {
+        return stackPointer == 0;
+    }
 }
