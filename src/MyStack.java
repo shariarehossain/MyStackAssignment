@@ -6,6 +6,9 @@ public class MyStack {
         elements = new int[10];
         stackPointer = 0;
     }
-
+    public void push(int n) {
+        elements[stackPointer] = n;
+        stackPointer++;
+    }
 
 }
