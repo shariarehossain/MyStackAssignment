@@ -1,21 +1,32 @@
 import java.util.ArrayList;
 
-public class MyStack {
-    private ArrayList<Integer> elements;
+public class MyStack<T> {
+    private ArrayList<T> elements;
 
     public MyStack() {
         elements = new ArrayList<>();
     }
 
-    public void push(int n) { elements.add(n); }
-
-    public void pop() {
-        if(!elements.isEmpty()) elements.remove(elements.size() - 1);
+    public void push(T obj) {
+        elements.add(obj);
     }
 
-    public int top() { return elements.get(elements.size() - 1); }
+    public void pop() {
+        if (!elements.isEmpty())
+            elements.remove(elements.size() - 1);
+    }
 
-    public boolean isEmpty() { return elements.isEmpty(); }
+    public T top() {
+        if (!elements.isEmpty())
+            return elements.get(elements.size() - 1);
+        return null; // or throw exception
+    }
 
-    public int getSize() { return elements.size(); }
+    public boolean isEmpty() {
+        return elements.isEmpty();
+    }
+
+    public int getSize() {
+        return elements.size();
+    }
 }
