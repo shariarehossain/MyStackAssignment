@@ -13,4 +13,7 @@ public class MyStack {
     public void pop() {
         if(stackPointer > 0) stackPointer--;
     }
+    public int top() {
+        return elements[stackPointer - 1];
+    }
 }
